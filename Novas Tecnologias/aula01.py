@@ -1,0 +1,1 @@
+print('Preparando o abiente')
