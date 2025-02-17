@@ -1,1 +1,1 @@
-print('Preparando o abiente')
+print('Preparando o ambiente')
