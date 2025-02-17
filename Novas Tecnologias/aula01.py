@@ -1,1 +1,0 @@
-print('Preparando o ambiente')
