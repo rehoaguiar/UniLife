@@ -33,7 +33,7 @@ console.log(5 === "5") // Falso -> Extritamente Igual (Leva em consideração o 
 console.log(5 != "5") // Desigualdade (Ignorando o tipo e levando em consideração o valor)
 console.log(5 !== "5") // Extritamente Desigual (Leva em consideração o valor e o tipo)
 
-// dads de entrada (input)
+// dados de entrada (input)
 var nomeCompleto = window.prompt("Digite o nome: ")
 var idade = parseFloat(window.prompt("Digite a idade: ")) // Mudamos o tipo da informação recebida para float
 
