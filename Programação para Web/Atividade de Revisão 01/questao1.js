@@ -5,24 +5,23 @@ let numGerado = Math.floor(Math.random() * 20) + 1
 
 function perguntarNum(){
     var tentativaUser = parseInt(window.prompt("Digite a sua tentativa: "))
+
     isNum(tentativaUser)
     verificar_num(tentativaUser)
-    return tentativaUser
 }
 
-function verificar_num(tentativaUser,numGerado){
+function verificar_num(tentativaUser){
     if(tentativaUser > 20 || tentativaUser < 1){
         console.log('Opção inválida. Por favor digite somente números inteiros')
         perguntarNum()
-    }
-    
-    if (tentativaUser > numGerado) {
+
+    } else if (tentativaUser > numGerado) {
         console.log(`O número ${tentativaUser} é maior que o número secreto`);
         perguntarNum();
 
     } else if (tentativaUser === numGerado) {
         console.log(`Parabéns! O número secreto era igual a ${tentativaUser}`);
-        perguntarNum();
+
     } else {
         console.log(`O número ${tentativaUser} é menor que o número secreto`);
         perguntarNum();
@@ -30,7 +29,7 @@ function verificar_num(tentativaUser,numGerado){
 }
 
 // Tratamento de erros
-function isNum(){
+function isNum(tentativaUser){
     if (isNaN(tentativaUser)) {
         console.log('Opção inválida. Por favor digite somente números inteiros')
         perguntarNum()
@@ -38,4 +37,5 @@ function isNum(){
     }
 }
 
-//
+perguntarNum()
+

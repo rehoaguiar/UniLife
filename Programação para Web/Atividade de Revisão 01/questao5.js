@@ -1,0 +1,1 @@
+// 5 - Escreva um programa para encontrar a soma da série 1 + 11 + 1111 + ... n termos. Conforme a entrada a seguir: Exemplo da saída: Se o usuário digitar a quantidade de termos igual a 5, o resultado será: 1 + 11 + 111 + 1111 + 11111 A soma é: 12345
