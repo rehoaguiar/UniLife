@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Interativa</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { padding-left: 2vh; }
+        #contador { font-size: 20px; margin-left: 10px; }
+        #contar_caracteres { margin-top: 10px; }
+        #saida { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Página Interativa</h1>
+    <div class="container">
+        <h2> Contador de Cliques </h2>
+        <span id="contador">0</span>
+        <br><br>
+        <button onclick="incrementar()">Incrementar</button>
+        <button onclick="decrementar()">Decrementar</button>
+    </div>
+    
+    <div class="container">
+        <h2> Contador de Caracteres </h2>
+        <input type="texto" id="inputTexto" placeholder="Digite algo...">
+        <p id="contar_caracteres">Caracteres: 0</p>
+        <div id="saida"></div>
+    </div>
+
+    <div class="container">
+        <h2>Adicionar Novo Item</h2>
+        <select id="tipo_lista">
+            <option value="ol">Lista Ordenada</option>
+            <option value="ul">Lista Não Ordenada</option>
+        </select>
+        <button onclick="addListItem()">Adicionar Item</button>
+        <div id="listas"></div>
+    </div>
+    
+    <div class="container">
+        <h2>Reset</h2>
+        <button onclick="resetPage()">Resetar</button>
+    </div>
+    
+    <script>
+        let contar = 0;
+        
+        function incrementar() {
+            contar++;
+            document.getElementById("contador").innerText = contar;
+        }
+        
+        function decrementar() {
+            if (contar > 0) {
+                contar--;
+                document.getElementById("contador").innerText = contar;
+            } else {
+                alert("O contador já está em zero!");
+            }
+        }
+        
+        document.getElementById("inputTexto").addEventListener("input", function() {
+            let texto = this.value.replace(/\s/g, "");
+            document.getElementById("contar_caracteres").innerText = "Caracteres: " + texto.length;
+        });
+        
+        document.getElementById("inputTexto").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                let texto = this.value.trim();
+                if (texto) {
+                    let p = document.createElement("p");
+                    p.textContent = texto;
+                    document.getElementById("saida").appendChild(p);
+                    this.value = "";
+                    document.getElementById("contar_caracteres").innerText = "Caracteres: 0";
+                }
+            }
+        });
+        
+        function addListItem() {
+            let tipo_lista = document.getElementById("tipo_lista").value;
+            let containerLista = document.getElementById("listas");
+            let lista = containerLista.querySelector(tipo_lista) || document.createElement(tipo_lista);
+            
+            if (!containerLista.contains(lista)) {
+                containerLista.appendChild(lista);
+            }
+            
+            let item = document.createElement("li");
+            item.textContent = "Novo Item";
+            lista.appendChild(item);
+        }
+        
+        function resetPage() {
+            count = 0;
+            document.getElementById("contador").innerText = "0";
+            document.getElementById("inputTexto").value = "";
+            document.getElementById("contar_caracteres").innerText = "Caracteres: 0";
+            document.getElementById("saida").innerHTML = "";
+            document.getElementById("listas").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
