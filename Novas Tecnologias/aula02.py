@@ -34,15 +34,15 @@ else:
 
 
 match est_civil:
-    case S:
+    case 'S':
         pcivil = 'Solteiro'
-    case C:
+    case 'C':
         pcivil = 'Casado'
-    case D:
+    case 'D':
         pcivil = 'Divorciado'
-    case V:
+    case 'V':
         pcivil = 'Viúvo'
-    _:
+    case _:
         pcivil = 'Mensagem inválida! Tente novamente'
     
 
