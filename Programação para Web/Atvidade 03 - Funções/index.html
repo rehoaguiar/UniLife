@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Interativa</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { padding-left: 2vh; }
+        #contador { font-size: 20px; margin-left: 10px; }
+        #contar_caracteres { margin-top: 10px; }
+        #saida { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> Adicionar Item à Tabela </h1>
+        <input type="text" id="inputTexto" placeholder="Digite algo...">
+        <button onclick="">Adicionar</button>
+        <br><br>
+    </div>
+    
+    <div class="container">
+        <h2> Tabela de Itens </h2>
+        <table border="1">
+            <thead>
+                <th> Item </td>
+            </thead>
+            <tbody>
+                <tr> 
+                    <td> --- </td>
+                </tr>
+                <tr>
+                    <td> --- </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Marcar ou Desmarcar o Item </h2>
+        <select id="escolherItem">
+        </select>
+        <button onclick=""> Marcar </button>
+        <button onclick=""> Desmarcar </button>
+        <button onclick=""> Remover Item </button>
+        <div id="listas"></div>
+    </div>
+</body>
+</html>
