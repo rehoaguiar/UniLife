@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container py-5">
+        <h1> Calculadora de Abastecimento </h1>
+        <hr>
+        
+        <div class="container">
+            <strong> Escolha o tipo de combustível e a quantidade de litros </strong>
+            
+            <p> Preço por litro: </p>
+            <ul>
+                <li> Gasolina: R$5,79 </li>
+                <li> Etanol: R$4,29 </li>
+                <li> Diesel: R$6,19 </li>
+            </ul>
+        </div>
+        
+        <form>
+            <div class="container">
+                <label for="combustivel"> Tipo de Combustível </label>
+                <select name="combustivel" id="combustivel">
+                    <option value="gasolina"> Gasolina </option>
+                    <option value="etanol"> Etanol </option>
+                    <option value="diesel"> Diesel </option>
+                </select>
+            </div>
+            <div class="container py-2">
+                <label for="litros"> Quantidade </label>
+                <input type="number" min="0" step="0.1" required id="litros">
+            </div>
+        </form>
+        <h4 class="py-4"> Resultado: </h4>
+        <p id="resultado"></p>
+    </div>
+    <script src="aula05.js"></script>
+</body>
+</html>
