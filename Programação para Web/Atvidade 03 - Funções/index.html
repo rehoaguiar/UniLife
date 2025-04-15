@@ -14,9 +14,9 @@
 </head>
 <body>
     <div class="container">
-        <h2> Adicionar Item à Tabela </h1>
+        <h2> Adicionar Item à Tabela </h2>
         <input type="text" id="inputTexto" placeholder="Digite algo...">
-        <button onclick="">Adicionar</button>
+        <button id="btnAdicionar">Adicionar</button>
         <br><br>
     </div>
     
@@ -24,15 +24,12 @@
         <h2> Tabela de Itens </h2>
         <table border="1">
             <thead>
-                <th> Item </td>
-            </thead>
-            <tbody>
-                <tr> 
-                    <td> --- </td>
-                </tr>
                 <tr>
-                    <td> --- </td>
+                    <th> Item </th>
                 </tr>
+                    
+            </thead>
+            <tbody id="TabelaItens">
             </tbody>
         </table>
     </div>
@@ -41,9 +38,9 @@
         <h2>Marcar ou Desmarcar o Item </h2>
         <select id="escolherItem">
         </select>
-        <button onclick=""> Marcar </button>
-        <button onclick=""> Desmarcar </button>
-        <button onclick=""> Remover Item </button>
+        <button id="btnMarcar"> Marcar </button>
+        <button id="btnDesmarcar"> Desmarcar </button>
+        <button id="btnRemover"> Remover Item </button>
         <div id="listas"></div>
     </div>
 </body>
