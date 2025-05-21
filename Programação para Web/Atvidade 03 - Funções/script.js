@@ -1,16 +1,30 @@
 const inputTexto = document.getElementById("inputTexto");
+<<<<<<< HEAD
 const tabela = document.getElementById("corpoTabela");
 const select = document.getElementById("escolherItem");
+=======
+const tabelaItens = document.getElementById("tabelaItens");
+const btnAdicionar =  document.getElementById("btnAdicionar");
+>>>>>>> 650329a0e1c8311c092f2ac1f11e510f5fc23d97
 
 function adicionarItem() {
     const valor = inputTexto.value.trim();
 
+<<<<<<< HEAD
     if (valor === "") {
         alert("Digite um valor válido!");
         return;
     }
 
     // Criar nova linha e célula
+=======
+    if (valor == '') {
+        alert("Por favor digite algo!")
+        return;
+    }
+
+    // Criar nova linha na tabela
+>>>>>>> 650329a0e1c8311c092f2ac1f11e510f5fc23d97
     const novaLinha = document.createElement("tr");
     const novaCelula = document.createElement("td");
     novaCelula.textContent = valor;
@@ -23,6 +37,7 @@ function adicionarItem() {
     novaOpcao.textContent = valor;
     select.appendChild(novaOpcao);
 
+<<<<<<< HEAD
     inputTexto.value = "";
 }
 
@@ -81,3 +96,23 @@ function removerItem() {
         }
     }
 }
+=======
+    // Limpar input
+    inputTexto.value = "";
+    inputTexto.focus();
+}
+
+function adicionarItemSelect() {
+}
+
+function marcarItem(){
+}
+
+function desmarcarItem(){
+}
+
+function removerItem(){
+}
+
+const selectItens = document.getElementById("escolherItem");
+>>>>>>> 650329a0e1c8311c092f2ac1f11e510f5fc23d97
