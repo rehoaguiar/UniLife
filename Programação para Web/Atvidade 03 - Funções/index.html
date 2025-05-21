@@ -5,46 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Interativa</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        .container { padding-left: 2vh; }
-        #contador { font-size: 20px; margin-left: 10px; }
-        #contar_caracteres { margin-top: 10px; }
-        #saida { margin-top: 10px; }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            padding-left: 2vh;
+        }
+
+        .marcado {
+            background-color: yellow;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+
+        button {
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2> Adicionar Item à Tabela </h1>
+        <h2>Adicionar Item à Tabela</h2>
         <input type="text" id="inputTexto" placeholder="Digite algo...">
-        <button onclick="">Adicionar</button>
-        <br><br>
+        <button onclick="adicionarItem()">Adicionar</button>
     </div>
-    
+
     <div class="container">
-        <h2> Tabela de Itens </h2>
-        <table border="1">
+        <h2>Tabela de Itens</h2>
+        <table>
             <thead>
-                <th> Item </td>
-            </thead>
-            <tbody>
-                <tr> 
-                    <td> --- </td>
-                </tr>
                 <tr>
-                    <td> --- </td>
+                    <th>Item</th>
                 </tr>
-            </tbody>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
         </table>
     </div>
 
     <div class="container">
-        <h2>Marcar ou Desmarcar o Item </h2>
-        <select id="escolherItem">
-        </select>
-        <button onclick=""> Marcar </button>
-        <button onclick=""> Desmarcar </button>
-        <button onclick=""> Remover Item </button>
-        <div id="listas"></div>
+        <h2>Marcar ou Desmarcar o Item</h2>
+        <select id="escolherItem"></select>
+        <button onclick="marcarItem()">Marcar</button>
+        <button onclick="desmarcarItem()">Desmarcar</button>
+        <button onclick="removerItem()">Remover Item</button>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
